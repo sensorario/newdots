@@ -1,23 +1,18 @@
-# NERDTree
-rm -rf ~/.vim/pack/vendor/start/nerdtree
+rm -rf ~/.vim/pack/vendor/**
+rm -rf ~/.vim/pack/packages/**
+
+# dependencies
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+# plugins
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
-vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
-
-
-# vim-airline
-rm -rf ~/.vim/pack/vendor/start/vim-airline
 git clone https://github.com/vim-airline/vim-airline.git ~/.vim/pack/vendor/start/vim-airline
-vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-airline/doc" -c q
-
-
-# nerdtree plugin
-rm -rf ~/.vim/pack/vendor/start/nerdtree-git-plugin
 git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/pack/vendor/start/nerdtree-git-plugin
-vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree-git-plugin/doc" -c q
+git clone https://github.com/junegunn/fzf.git ~/.vim/pack/packages/start/fzf
+git clone https://github.com/junegunn/fzf.vim.git ~/.vim/pack/packages/start/fzf.vim
 
-
-
-
+# vimrc
 cat > ~/.vimrc<< EOF
 
 " Tabs and spaces
