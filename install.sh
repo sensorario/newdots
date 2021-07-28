@@ -1,19 +1,21 @@
-rm -rf ~/.vim/pack/vendor/**
-rm -rf ~/.vim/pack/packages/**
+rm -rf ~/.fzf
+rm -rf ~/.vim/pack
 
 # dependencies
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+yes | ~/.fzf/install
 
 # plugins
-git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 git clone https://github.com/vim-airline/vim-airline.git ~/.vim/pack/vendor/start/vim-airline
+git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/pack/vendor/start/nerdtree-git-plugin
 git clone https://github.com/junegunn/fzf.git ~/.vim/pack/packages/start/fzf
 git clone https://github.com/junegunn/fzf.vim.git ~/.vim/pack/packages/start/fzf.vim
 
 # vimrc
 cat > ~/.vimrc<< EOF
+" encoding
+set encoding=UTF-8
 
 " Tabs and spaces
 set expandtab
@@ -30,6 +32,8 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+autocmd VimEnter * NERDTree
 
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -48,4 +52,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
 let g:NERDTreeGitStatusShowIgnored = 1 " a heavy feature may cost much more time. default: 0
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled = 1
 
