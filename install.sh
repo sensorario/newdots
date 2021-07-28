@@ -32,6 +32,10 @@ set shiftwidth=4
 set smarttab
 set softtabstop=4
 set tabstop=4
+set t_Co=256
+
+set fillchars=vert:'|'
+hi! VertSplit guifg=black guibg=black ctermfg=black ctermbg=black
 
 " Map the ledaer
 let mapleader = "\\\"
@@ -63,6 +67,7 @@ let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourse
 let g:NERDTreeGitStatusShowIgnored = 1 " a heavy feature may cost much more time. default: 0
 
 " airline
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 
