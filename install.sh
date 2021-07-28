@@ -11,8 +11,17 @@ git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/ner
 git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/pack/vendor/start/nerdtree-git-plugin
 git clone https://github.com/junegunn/fzf.git ~/.vim/pack/packages/start/fzf
 git clone https://github.com/junegunn/fzf.vim.git ~/.vim/pack/packages/start/fzf.vim
+git clone https://tpope.io/vim/fugitive.git ~/.vim/pack/tpope/start/fugitive
 
-# vimrc
+# documentations
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-airline/doc" -c q
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree-git-plugin/doc" -c q
+vim -u NONE -c "helptags ~/.vim/pack/packages/start/fzf/doc" -c q
+vim -u NONE -c "helptags ~/.vim/pack/packages/start/fzf.vim/doc" -c q
+vim -u NONE -c "helptags ~/.vim/pack/tpope/start/fugitive/doc" -c q
+
+# vimrc file
 cat > ~/.vimrc<< EOF
 " encoding
 set encoding=UTF-8
