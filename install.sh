@@ -33,11 +33,13 @@ set smarttab
 set softtabstop=4
 set tabstop=4
 
+
 " Other terminal stuffs
 set t_Co=256
 filetype on
 set nocompatible
 syntax enable
+set number
 
 set fillchars=vert:'|'
 hi! VertSplit guifg=black guibg=black ctermfg=black ctermbg=black
