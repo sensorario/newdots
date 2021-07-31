@@ -1,25 +1,40 @@
 rm -rf ~/.fzf
-rm -rf ~/.vim/pack
 
 # dependencies
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | ~/.fzf/install
 
 # plugins
-git clone https://github.com/vim-airline/vim-airline.git ~/.vim/pack/vendor/start/vim-airline
-git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
-git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/pack/vendor/start/nerdtree-git-plugin
-git clone https://github.com/junegunn/fzf.git ~/.vim/pack/packages/start/fzf
-git clone https://github.com/junegunn/fzf.vim.git ~/.vim/pack/packages/start/fzf.vim
-git clone https://tpope.io/vim/fugitive.git ~/.vim/pack/tpope/start/fugitive
+folders=(
+    "$HOME/.vim/pack/vendor/start/vim-airline"
+    "$HOME/.vim/pack/vendor/start/nerdtree"
+    "$HOME/.vim/pack/vendor/start/nerdtree-git-plugin"
+    "$HOME/.vim/pack/packages/start/fzf"
+    "$HOME/.vim/pack/packages/start/fzf.vim"
+    "$HOME/.vim/pack/tpope/start/fugitive"
+)
+urls=(
+    "https://github.com/vim-airline/vim-airline.git"
+    "https://github.com/preservim/nerdtree.git"
+    "https://github.com/Xuyuanp/nerdtree-git-plugin.git"
+    "https://github.com/junegunn/fzf.git"
+    "https://github.com/junegunn/fzf.vim.git"
+    "https://github.com/tpope/vim-fugitive.git"
+)
 
-# documentations
-vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-airline/doc" -c q
-vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
-vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree-git-plugin/doc" -c q
-vim -u NONE -c "helptags ~/.vim/pack/packages/start/fzf/doc" -c q
-vim -u NONE -c "helptags ~/.vim/pack/packages/start/fzf.vim/doc" -c q
-vim -u NONE -c "helptags ~/.vim/pack/tpope/start/fugitive/doc" -c q
+for i in ${!folders[@]};
+do
+    folder=${folders[$i]}
+    url=${urls[$i]}
+     
+    if [ ! -d "$folder" ] ; then
+        git clone "$url" "$folder"
+    else
+        git -C $folder pull 
+    fi
+
+    vim -u NONE -c "helptags $folder/doc" -c q
+done
 
 # vimrc file
 cat > ~/.vimrc<< EOF
