@@ -49,7 +49,7 @@ set softtabstop=4
 set tabstop=4
 
 
-" Other terminal stuffs
+" Other editor stuffs
 set t_Co=256
 filetype on
 set nocompatible
