@@ -19,7 +19,7 @@ urls=(
     "https://github.com/Xuyuanp/nerdtree-git-plugin.git"
     "https://github.com/junegunn/fzf.git"
     "https://github.com/junegunn/fzf.vim.git"
-    "https://github.com/tpope/vim-fugitive.git"
+    "https://github.com/tpope/vim-fugitive.git/"
 )
 
 for i in ${!folders[@]};
