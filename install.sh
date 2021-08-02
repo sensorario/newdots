@@ -57,6 +57,7 @@ syntax enable
 set number
 set cursorcolumn
 set cursorline
+set smartindent
 
 set fillchars=vert:'|'
 hi! VertSplit guifg=black guibg=black ctermfg=black ctermbg=black
