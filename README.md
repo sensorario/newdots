@@ -1,5 +1,14 @@
 # Newdots
 
+## Colorscheme
+
+ - Custom colorscheme called halloween
+
+## Vim
+
+ - version required: 8
+ - good for html, css, javascript and php
+
 ## Plugins
 
  - vim-airline/vim-airline.git"
