@@ -164,6 +164,8 @@ set cursorline
 set smartindent
 colorscheme halloween
 set backspace=indent,eol,start
+set noswapfile
+
 
 " set fillchars=vert:''
 " hi! VertSplit guifg=black guibg=black ctermfg=black ctermbg=black
