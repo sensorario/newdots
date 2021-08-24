@@ -23,7 +23,3 @@
 ### Complete installation
 
 bash <(wget -qO- https://raw.githubusercontent.com/sensorario/newdots/master/install.sh)
-
-### Small installation
-
-bash <(wget -qO- https://raw.githubusercontent.com/sensorario/newdots/master/install-no-plugin.sh)
