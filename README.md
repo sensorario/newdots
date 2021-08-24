@@ -6,7 +6,7 @@
 
 ## Vim
 
- - version required: 8
+ - version required: 8.2 (tested with this version)
  - good for html, css, javascript and php
 
 ## Plugins
@@ -20,4 +20,10 @@
 
 ## Install
 
+### Complete installation
+
 bash <(wget -qO- https://raw.githubusercontent.com/sensorario/newdots/master/install.sh)
+
+### Small installation
+
+bash <(wget -qO- https://raw.githubusercontent.com/sensorario/newdots/master/install-no-plugin.sh)
