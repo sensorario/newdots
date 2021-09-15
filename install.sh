@@ -12,6 +12,7 @@ folders=(
     "$HOME/.vim/pack/packages/start/fzf"
     "$HOME/.vim/pack/packages/start/fzf.vim"
     "$HOME/.vim/pack/tpope/start/fugitive"
+    "$HOME/.vim/pack/vendor/start/vim-gitgutter"
 )
 urls=(
     "https://github.com/vim-airline/vim-airline.git"
@@ -20,6 +21,7 @@ urls=(
     "https://github.com/junegunn/fzf.git"
     "https://github.com/junegunn/fzf.vim.git"
     "https://github.com/tpope/vim-fugitive.git/"
+    "https://github.com/airblade/vim-gitgutter.git/"
 )
 
 for i in ${!folders[@]};
