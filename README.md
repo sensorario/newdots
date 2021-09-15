@@ -2,7 +2,8 @@
 
 ## Colorscheme
 
- - Custom colorscheme called halloween
+ - Colorscheme Dark halloween
+ - Colorscheme Light blackdust
 
 ## Vim
 
@@ -17,6 +18,7 @@
  - junegunn/fzf.git"
  - junegunn/fzf.vim.git"
  - tpope/vim-fugitive.git/"
+ - airblade/vim-gitgutter.git/"
 
 ## Install
 
