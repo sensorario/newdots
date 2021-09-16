@@ -5,38 +5,40 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | ~/.fzf/install
 
 # plugins
-folders=(
+plugins=(
     "$HOME/.vim/pack/vendor/start/vim-airline"
-    "$HOME/.vim/pack/vendor/start/nerdtree"
-    "$HOME/.vim/pack/vendor/start/nerdtree-git-plugin"
-    "$HOME/.vim/pack/packages/start/fzf"
-    "$HOME/.vim/pack/packages/start/fzf.vim"
-    "$HOME/.vim/pack/tpope/start/fugitive"
-    "$HOME/.vim/pack/vendor/start/vim-gitgutter"
-)
-urls=(
     "https://github.com/vim-airline/vim-airline.git"
+    "$HOME/.vim/pack/vendor/start/nerdtree"
     "https://github.com/preservim/nerdtree.git"
+    "$HOME/.vim/pack/vendor/start/nerdtree-git-plugin"
     "https://github.com/Xuyuanp/nerdtree-git-plugin.git"
+    "$HOME/.vim/pack/packages/start/fzf"
     "https://github.com/junegunn/fzf.git"
+    "$HOME/.vim/pack/packages/start/fzf.vim"
     "https://github.com/junegunn/fzf.vim.git"
+    "$HOME/.vim/pack/tpope/start/fugitive"
     "https://github.com/tpope/vim-fugitive.git/"
+    "$HOME/.vim/pack/vendor/start/vim-gitgutter"
     "https://github.com/airblade/vim-gitgutter.git/"
 )
 
-for i in ${!folders[@]};
+echo "\n >>> START plugins installation "
+for i in ${!plugins[@]};
 do
-    folder=${folders[$i]}
-    url=${urls[$i]}
-     
-    if [ ! -d "$folder" ] ; then
-        git clone "$url" "$folder"
-    else
-        git -C $folder pull 
+    if (( i % 2 == 0 ))
+    then
+        # echo $i
+        folder="${plugins[$i]}"
+        url="${plugins[$i+1]}"
+        if [ ! -d "$folder" ] ; then
+            git clone "$url" "$folder"
+        else
+            git -C $folder pull 
+        fi
+        vim -u NONE -c "helptags $folder/doc" -c q
     fi
-
-    vim -u NONE -c "helptags $folder/doc" -c q
 done
+echo " >>> END plugins installation "
 
 # vimrc file
 cat > ~/.vimrc<< VIMRC
