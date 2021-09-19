@@ -64,6 +64,7 @@ set smartindent
 colorscheme blackdust
 set backspace=indent,eol,start
 set noswapfile
+set ignorecase
 
 
 " set fillchars=vert:''
