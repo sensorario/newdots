@@ -67,9 +67,6 @@ set noswapfile
 set ignorecase
 
 
-" set fillchars=vert:''
-" hi! VertSplit guifg=black guibg=black ctermfg=black ctermbg=black
-
 set fillchars=vert:\ 
 hi! VertSplit guifg=black guibg=black ctermfg=black ctermbg=black
 
