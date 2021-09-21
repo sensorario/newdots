@@ -12,13 +12,13 @@
 
 ## Plugins
 
- - vim-airline/vim-airline.git"
- - preservim/nerdtree.git"
- - Xuyuanp/nerdtree-git-plugin.git"
- - junegunn/fzf.git"
- - junegunn/fzf.vim.git"
- - tpope/vim-fugitive.git/"
- - airblade/vim-gitgutter.git/"
+ - vim-airline/vim-airline.git
+ - preservim/nerdtree.git
+ - Xuyuanp/nerdtree-git-plugin.git
+ - junegunn/fzf.git
+ - junegunn/fzf.vim.git
+ - tpope/vim-fugitive.git/
+ - airblade/vim-gitgutter.git/
 
 ## Install
 

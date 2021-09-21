@@ -81,6 +81,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 " Fzf
 nnoremap <C-p> :Files<CR>
+nnoremap <C-P> :Files!<CR>
 
 " Buffers
 nnoremap <C-h> :bprevious<CR>
