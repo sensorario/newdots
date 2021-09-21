@@ -77,8 +77,8 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 " Fzf
-nnoremap <C-p> :Files<CR>
-nnoremap <C-P> :Files!<CR>
+nnoremap <C-p> :FZF<CR>
+nnoremap <C-P> :FZF!<CR>
 
 " Buffers
 nnoremap <C-h> :bprevious<CR>
