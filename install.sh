@@ -34,6 +34,9 @@ do
 done
 echo " >>> END plugins installation "
 
+# install if not exists
+mkdir -p ~/.vim/colors/
+
 # vimrc file
 cat > ~/.vimrc<< VIMRC
 " encoding
