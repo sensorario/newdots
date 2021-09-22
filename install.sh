@@ -68,10 +68,9 @@ colorscheme blackdust
 set backspace=indent,eol,start
 set noswapfile
 set ignorecase
-
-
 set fillchars=vert:\ 
 hi! VertSplit guifg=black guibg=black ctermfg=black ctermbg=black
+set autoread | au CursorHold * checktime | call feedkeys("hjkl")
 
 " Map the ledaer
 let mapleader = "\\\"
