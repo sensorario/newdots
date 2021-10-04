@@ -71,6 +71,7 @@ set ignorecase
 set fillchars=vert:\ 
 hi! VertSplit guifg=black guibg=black ctermfg=black ctermbg=black
 set autoread | au CursorHold * checktime | call feedkeys("hjkl")
+set mouse=a
 
 " Map the ledaer
 let mapleader = "\\\"
@@ -82,8 +83,9 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 " Fzf
-nnoremap <C-p> :FZF<CR>
-nnoremap <C-P> :FZF!<CR>
+nnoremap <C-s> :FZF<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-P> :Files!<CR>
 
 " Buffers
 nnoremap <C-h> :bprevious<CR>
