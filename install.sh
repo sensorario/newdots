@@ -64,7 +64,7 @@ set number
 set cursorcolumn
 set cursorline
 set smartindent
-colorscheme blackdust
+colorscheme halloween
 set backspace=indent,eol,start
 set noswapfile
 set ignorecase
