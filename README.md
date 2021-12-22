@@ -24,6 +24,13 @@
 
 ### Complete installation
 
+Using wget, ...
+
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/sensorario/newdots/master/install.sh)
+```
+or curl
+
+```curl
+source <(curl -s https://raw.githubusercontent.com/sensorario/newdots/master/install.sh)
 ```
