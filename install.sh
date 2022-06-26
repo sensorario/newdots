@@ -20,6 +20,8 @@ plugins=(
     "https://github.com/tpope/vim-fugitive.git/"
     "$HOME/.vim/pack/vendor/start/vim-gitgutter"
     "https://github.com/airblade/vim-gitgutter.git/"
+    "$HOME/.vim/pack/vendor/start/vim-composer"
+    "https://github.com/vim-php/vim-composer.git/"
 )
 
 echo "\n >>> START plugins installation "

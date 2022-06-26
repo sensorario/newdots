@@ -19,6 +19,7 @@
  - junegunn/fzf.vim.git
  - tpope/vim-fugitive.git/
  - airblade/vim-gitgutter.git/
+ - vim-php/vim-composer.git/
 
 ## Install
 
@@ -29,6 +30,7 @@ Using wget, ...
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/sensorario/newdots/master/install.sh)
 ```
+
 or curl
 
 ```curl
