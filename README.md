@@ -33,6 +33,12 @@ bash <(wget -qO- https://raw.githubusercontent.com/sensorario/newdots/master/ins
 
 or curl
 
-```curl
+```bash
 source <(curl -s https://raw.githubusercontent.com/sensorario/newdots/master/install.sh)
+```
+
+or
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/sensorario/newdots/master/install.sh)
 ```
